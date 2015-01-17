@@ -32,13 +32,13 @@ public class Chess
 				}
 				else if(board[i][j] == 'K')
 				{
-					if(j - 1 >= 0 && i + 1 >= 0 && board[i - 1][j - 1] == 'P')
+					if(j - 1 >= 0 && i + 1 >= 0 && board[i - 1][j - 1] == 'p')
 					{
-						return 'P';
+						return 'p';
 					}
-					else if (j + 1 <= 7 && i + 1 >= 0 && board[i - 1][j + 1] == 'P')
+					else if (j + 1 <= 7 && i + 1 >= 0 && board[i - 1][j + 1] == 'p')
 					{
-						return 'P';
+						return 'p';
 					}
 				}
 			}
