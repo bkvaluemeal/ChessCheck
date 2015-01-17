@@ -14,29 +14,30 @@ public class Chess
 	 */
 	public static char getCheck(char[][] board)
 	{
-		// Check for pawns
-		for(int i = 0; i < board.length; i++)
+		for(int vert = 0; vert < board.length; vert++)
 		{
-			for(int j = 0; j < board[i].length; j++)
+			for(int hori = 0; hori < board[vert].length; hori++)
 			{
-				if(board[i][j] == 'k')
+				if(board[vert][hori] == 'k')
 				{
-					if(j - 1 >= 0 && i + 1 <= 7 && board[i + 1][j - 1] == 'P')
+					// Check for pawns
+					if(vert + 1 <= 7 && hori - 1 >= 0 && board[vert + 1][hori - 1] == 'P')
 					{
 						return 'P';
 					}
-					else if (j + 1 <= 7 && i + 1 <= 7 && board[i + 1][j + 1] == 'P')
+					else if (vert + 1 <= 7 && hori + 1 <= 7 && board[vert + 1][hori + 1] == 'P')
 					{
 						return 'P';
 					}
 				}
-				else if(board[i][j] == 'K')
+				else if(board[vert][hori] == 'K')
 				{
-					if(j - 1 >= 0 && i + 1 >= 0 && board[i - 1][j - 1] == 'p')
+					// Check for pawns
+					if(vert + 1 >= 0 && hori - 1 >= 0 && board[vert - 1][hori - 1] == 'p')
 					{
 						return 'p';
 					}
-					else if (j + 1 <= 7 && i + 1 >= 0 && board[i - 1][j + 1] == 'p')
+					else if (vert + 1 >= 0 && hori + 1 <= 7 && board[vert - 1][hori + 1] == 'p')
 					{
 						return 'p';
 					}
