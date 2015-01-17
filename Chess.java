@@ -29,6 +29,40 @@ public class Chess
 					{
 						return 'P';
 					}
+					
+					// Check for king
+					if(vert - 1 >= 0 && hori - 1 >= 0 && board[vert - 1][hori - 1] == 'K')
+					{
+						return 'K';
+					}
+					else if(vert - 1 >= 0 && board[vert - 1][hori] == 'K')
+					{
+						return 'K';
+					}
+					else if(vert - 1 >= 0 && hori + 1 <= 7 && board[vert - 1][hori + 1] == 'K')
+					{
+						return 'K';
+					}
+					else if(hori - 1 >= 0 && board[vert][hori - 1] == 'K')
+					{
+						return 'K';
+					}
+					else if(hori + 1 <= 7 && board[vert][hori + 1] == 'K')
+					{
+						return 'K';
+					}
+					else if(vert + 1 <= 7 && hori - 1 >= 0 && board[vert + 1][hori - 1] == 'K')
+					{
+						return 'K';
+					}
+					else if(vert + 1 <= 7 && board[vert + 1][hori] == 'K')
+					{
+						return 'K';
+					}
+					else if(vert + 1 <= 7 && hori + 1 <= 7 && board[vert + 1][hori + 1] == 'K')
+					{
+						return 'K';
+					}
 				}
 				else if(board[vert][hori] == 'K')
 				{
@@ -40,6 +74,40 @@ public class Chess
 					else if (vert + 1 >= 0 && hori + 1 <= 7 && board[vert - 1][hori + 1] == 'p')
 					{
 						return 'p';
+					}
+					
+					// Check for king
+					if(vert - 1 >= 0 && hori - 1 >= 0 && board[vert - 1][hori - 1] == 'k')
+					{
+						return 'k';
+					}
+					else if(vert - 1 >= 0 && board[vert - 1][hori] == 'k')
+					{
+						return 'k';
+					}
+					else if(vert - 1 >= 0 && hori + 1 <= 7 && board[vert - 1][hori + 1] == 'k')
+					{
+						return 'k';
+					}
+					else if(hori - 1 >= 0 && board[vert][hori - 1] == 'k')
+					{
+						return 'k';
+					}
+					else if(hori + 1 <= 7 && board[vert][hori + 1] == 'k')
+					{
+						return 'k';
+					}
+					else if(vert + 1 <= 7 && hori - 1 >= 0 && board[vert + 1][hori - 1] == 'k')
+					{
+						return 'k';
+					}
+					else if(vert + 1 <= 7 && board[vert + 1][hori] == 'k')
+					{
+						return 'k';
+					}
+					else if(vert + 1 <= 7 && hori + 1 <= 7 && board[vert + 1][hori + 1] == 'k')
+					{
+						return 'k';
 					}
 				}
 			}
