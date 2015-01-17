@@ -64,6 +64,40 @@ public class Chess
 						return 'K';
 					}
 					
+					// Check for knights
+					if(vert - 2 >= 0 && hori - 1 >= 0 && board[vert - 2][hori - 1] == 'N')
+					{
+						return 'N';
+					}
+					else if(vert - 2 >= 0 && hori + 1 <= 7 && board[vert - 2][hori + 1] == 'N')
+					{
+						return 'N';
+					}
+					else if(vert - 1 >= 0 && hori - 2 >= 0 && board[vert - 1][hori - 2] == 'N')
+					{
+						return 'N';
+					}
+					else if(vert - 1 >= 0 && hori + 2 <= 7 && board[vert - 1][hori + 2] == 'N')
+					{
+						return 'N';
+					}
+					else if(vert + 1 <= 7 && hori - 2 >= 0 && board[vert + 1][hori - 2] == 'N')
+					{
+						return 'N';
+					}
+					else if(vert + 1 <= 7 && hori + 2 <= 7 && board[vert + 1][hori + 2] == 'N')
+					{
+						return 'N';
+					}
+					else if(vert + 2 <= 7 && hori - 1 >= 0 && board[vert + 2][hori - 1] == 'N')
+					{
+						return 'N';
+					}
+					else if(vert + 2 <= 7 && hori + 1 <= 7 && board[vert + 2][hori + 1] == 'N')
+					{
+						return 'N';
+					}
+					
 					// Check for rooks
 					for(int i = 0; i < board.length; i++)
 					{
@@ -117,6 +151,40 @@ public class Chess
 					else if(vert + 1 <= 7 && hori + 1 <= 7 && board[vert + 1][hori + 1] == 'k')
 					{
 						return 'k';
+					}
+					
+					// Check for knights
+					if(vert - 2 >= 0 && hori - 1 >= 0 && board[vert - 2][hori - 1] == 'n')
+					{
+						return 'n';
+					}
+					else if(vert - 2 >= 0 && hori + 1 <= 7 && board[vert - 2][hori + 1] == 'n')
+					{
+						return 'n';
+					}
+					else if(vert - 1 >= 0 && hori - 2 >= 0 && board[vert - 1][hori - 2] == 'n')
+					{
+						return 'n';
+					}
+					else if(vert - 1 >= 0 && hori + 2 <= 7 && board[vert - 1][hori + 2] == 'n')
+					{
+						return 'n';
+					}
+					else if(vert + 1 <= 7 && hori - 2 >= 0 && board[vert + 1][hori - 2] == 'n')
+					{
+						return 'n';
+					}
+					else if(vert + 1 <= 7 && hori + 2 <= 7 && board[vert + 1][hori + 2] == 'n')
+					{
+						return 'n';
+					}
+					else if(vert + 2 <= 7 && hori - 1 >= 0 && board[vert + 2][hori - 1] == 'n')
+					{
+						return 'n';
+					}
+					else if(vert + 2 <= 7 && hori + 1 <= 7 && board[vert + 2][hori + 1] == 'n')
+					{
+						return 'n';
 					}
 					
 					// Check for rooks
