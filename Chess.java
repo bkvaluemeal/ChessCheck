@@ -98,6 +98,31 @@ public class Chess
 						return 'N';
 					}
 					
+					// Check for queen
+					for(int i = 0; i < board.length; i++)
+					{
+						if(vert - i >= 0 && hori - i >= 0 && board[vert - i][hori - i] == 'Q')
+						{
+							return 'Q';
+						}
+						else if(vert - i >= 0 && hori + i <= 7 && board[vert - i][hori + i] == 'Q')
+						{
+							return 'Q';
+						}
+						else if(vert + i <= 7 && hori - i >= 0 && board[vert + i][hori - i] == 'Q')
+						{
+							return 'Q';
+						}
+						else if(vert + i <= 7 && hori + i <= 7 && board[vert + i][hori + i] == 'Q')
+						{
+							return 'Q';
+						}
+						else if(board[vert][i] == 'Q' || board[i][hori] == 'Q')
+						{
+							return 'Q';
+						}
+					}
+					
 					// Check for rooks
 					for(int i = 0; i < board.length; i++)
 					{
@@ -206,6 +231,31 @@ public class Chess
 					else if(vert + 2 <= 7 && hori + 1 <= 7 && board[vert + 2][hori + 1] == 'n')
 					{
 						return 'n';
+					}
+					
+					// Check for queen
+					for(int i = 0; i < board.length; i++)
+					{
+						if(vert - i >= 0 && hori - i >= 0 && board[vert - i][hori - i] == 'q')
+						{
+							return 'q';
+						}
+						else if(vert - i >= 0 && hori + i <= 7 && board[vert - i][hori + i] == 'q')
+						{
+							return 'q';
+						}
+						else if(vert + i <= 7 && hori - i >= 0 && board[vert + i][hori - i] == 'q')
+						{
+							return 'q';
+						}
+						else if(vert + i <= 7 && hori + i <= 7 && board[vert + i][hori + i] == 'q')
+						{
+							return 'q';
+						}
+						else if(board[vert][i] == 'q' || board[i][hori] == 'q')
+						{
+							return 'q';
+						}
 					}
 					
 					// Check for rooks
