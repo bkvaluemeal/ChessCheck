@@ -63,6 +63,15 @@ public class Chess
 					{
 						return 'K';
 					}
+					
+					// Check for rooks
+					for(int i = 0; i < board.length; i++)
+					{
+						if(board[vert][i] == 'R' || board[i][hori] == 'R')
+						{
+							return 'R';
+						}
+					}
 				}
 				else if(board[vert][hori] == 'K')
 				{
@@ -108,6 +117,15 @@ public class Chess
 					else if(vert + 1 <= 7 && hori + 1 <= 7 && board[vert + 1][hori + 1] == 'k')
 					{
 						return 'k';
+					}
+					
+					// Check for rooks
+					for(int i = 0; i < board.length; i++)
+					{
+						if(board[vert][i] == 'r' || board[i][hori] == 'r')
+						{
+							return 'r';
+						}
 					}
 				}
 			}
