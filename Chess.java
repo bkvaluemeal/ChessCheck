@@ -106,6 +106,27 @@ public class Chess
 							return 'R';
 						}
 					}
+					
+					// Check for bishops
+					for(int i = 0; i < board.length; i++)
+					{
+						if(vert - i >= 0 && hori - i >= 0 && board[vert - i][hori - i] == 'B')
+						{
+							return 'B';
+						}
+						else if(vert - i >= 0 && hori + i <= 7 && board[vert - i][hori + i] == 'B')
+						{
+							return 'B';
+						}
+						else if(vert + i <= 7 && hori - i >= 0 && board[vert + i][hori - i] == 'B')
+						{
+							return 'B';
+						}
+						else if(vert + i <= 7 && hori + i <= 7 && board[vert + i][hori + i] == 'B')
+						{
+							return 'B';
+						}
+					}
 				}
 				else if(board[vert][hori] == 'K')
 				{
@@ -193,6 +214,27 @@ public class Chess
 						if(board[vert][i] == 'r' || board[i][hori] == 'r')
 						{
 							return 'r';
+						}
+					}
+					
+					// Check for bishops
+					for(int i = 0; i < board.length; i++)
+					{
+						if(vert - i >= 0 && hori - i >= 0 && board[vert - i][hori - i] == 'b')
+						{
+							return 'b';
+						}
+						else if(vert - i >= 0 && hori + i <= 7 && board[vert - i][hori + i] == 'b')
+						{
+							return 'b';
+						}
+						else if(vert + i <= 7 && hori - i >= 0 && board[vert + i][hori - i] == 'b')
+						{
+							return 'b';
+						}
+						else if(vert + i <= 7 && hori + i <= 7 && board[vert + i][hori + i] == 'b')
+						{
+							return 'b';
 						}
 					}
 				}
